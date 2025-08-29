@@ -1,0 +1,203 @@
+/* USEI IA PARA CSS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0e6ff 0%, #fff6e6 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+#main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#geral {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(138, 43, 226, 0.1);
+    overflow: hidden;
+}
+
+#header {
+    background: linear-gradient(135deg, #d8bfd8 0%, #eee8aa 100%);
+    padding: 30px;
+    text-align: center;
+    border-bottom: 3px solid #9370db;
+}
+
+#header h1 {
+    color: #6a5acd;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 300;
+}
+
+#formulario_mural {
+    padding: 30px;
+    background: #faf8ff;
+    border-bottom: 2px solid #e6e6fa;
+}
+
+#mural {
+    display: grid;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#mural label {
+    color: #9370db;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+#mural input[type="text"],
+#mural textarea {
+    padding: 12px;
+    border: 2px solid #d8bfd8;
+    border-radius: 8px;
+    font-size: 1em;
+    background: #fff;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+#mural input[type="text"]:focus,
+#mural textarea:focus {
+    outline: none;
+    border-color: #9370db;
+    box-shadow: 0 0 10px rgba(147, 112, 219, 0.3);
+}
+
+#mural textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.btn {
+    background: linear-gradient(135deg, #9370db 0%, #daa520 100%);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(147, 112, 219, 0.4);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.recados {
+    background: linear-gradient(135deg, #f8f4ff 0%, #fffaf0 100%);
+    margin: 20px 30px;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid #9370db;
+    box-shadow: 0 4px 16px rgba(147, 112, 219, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.recados:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(147, 112, 219, 0.15);
+}
+
+.recados li {
+    list-style: none;
+    margin-bottom: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #e6e6fa;
+}
+
+.recados li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.recados strong {
+    color: #6a5acd;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+#footer {
+    background: linear-gradient(135deg, #d8bfd8 0%, #eee8aa 100%);
+    padding: 20px;
+    text-align: center;
+    color: #6a5acd;
+    font-weight: 500;
+}
+
+/* Estilos para validação */
+.error {
+    color: #dc143c;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: block;
+}
+
+input.error, textarea.error {
+    border-color: #dc143c;
+    background-color: #fff0f5;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #header {
+        padding: 20px;
+    }
+    
+    #header h1 {
+        font-size: 2em;
+    }
+    
+    #formulario_mural {
+        padding: 20px;
+    }
+    
+    .recados {
+        margin: 15px 20px;
+        padding: 20px;
+    }
+    
+    body {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #header h1 {
+        font-size: 1.7em;
+    }
+    
+    .recados {
+        margin: 10px 15px;
+        padding: 15px;
+    }
+    
+    #mural {
+        gap: 15px;
+    }
+    
+    .btn {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
