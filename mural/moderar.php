@@ -13,10 +13,10 @@ function deletarImagemCloudinary($public_id, $cloud_name, $api_key, $api_secret)
     $signature = sha1($string_to_sign);
 
     $data = [
-        'public_id' => $public_id,
-        'timestamp' => $timestamp,
-        'api_key' => $api_key,
-        'signature' => $signature
+        '$public_id' => $public_id,
+        '$timestamp' => $timestamp,
+        '$api_key' => $api_key,
+        '$signature' => $signature
     ];
 
     $ch = curl_init();
@@ -99,6 +99,7 @@ $produtos = mysqli_query($conexao, "SELECT * FROM produtos ORDER BY id DESC");
 <head>
     <meta charset="utf-8"/>
     <title>Moderar Produtos</title>
+    <link rel = "stylesheet" href = "moderar.css">
 </head>
 <body>
 <div id="main">

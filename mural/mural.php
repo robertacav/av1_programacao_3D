@@ -18,7 +18,7 @@ if(isset($_POST['cadastra'])){
     if(isset($_FILES['imagem']) && $_FILES['imagem']['error'] == 0){
         $cfile = new CURLFile($_FILES['imagem']['tmp_name'], $_FILES['imagem']['type'], $_FILES['imagem']['name']);
         $timestamp = time();
-        $string_to_sign = "timestamp=$timestamp$api_secret";
+        $string_to_sign = "api_key=$api_key&timestamp=$timestamp$api_secret";
         $signature = sha1($string_to_sign);
         
         $data = [
